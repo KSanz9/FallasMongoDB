@@ -5,6 +5,11 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const dbConfig = require('./config/database.config');
+let port = process.env.PORT;
+
+if(port ==null || port ==""){
+    port = 3000;
+}
 
 // Utilizaremos body-parser para "parsear lo que nos pidan"
 app.use(bodyParser.urlencoded({
@@ -34,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 require('./app/routes/puntuaciones.routes.js')(app);
 
 // Escuchemos en un puerto
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log(" * Miniserver UP and Running en http://localhost:3000");
 });
 
