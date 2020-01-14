@@ -7,7 +7,7 @@
 
 // Algunos valores
 var json;
-const fuentesUrl = "http://mapas.valencia.es/lanzadera/opendata/Monumentos_falleros/JSON ";
+const fuentesUrl = "https://mapas.valencia.es/lanzadera/opendata/Monumentos_falleros/JSON ";
 let sel = document.querySelector("select");
 let idLabelPtos = 0;
 var cordX;
